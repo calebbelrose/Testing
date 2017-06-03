@@ -46,27 +46,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MoveCar.cs" />
      <Compile Include="Assets\MoveMotionPack\SampleScene\Scripts\PlayManager.cs" />
-     <Compile Include="Assets\PickupObject.cs" />
+     <Compile Include="Assets\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\BlendShape.cs" />
      <Compile Include="Assets\Scripts\BlendShapeSlider.cs" />
+     <Compile Include="Assets\Scripts\BowAnimations.cs" />
+     <Compile Include="Assets\Scripts\BuildingSystem.cs" />
+     <Compile Include="Assets\Scripts\CarCamera.cs" />
+     <Compile Include="Assets\Scripts\CarControl.cs" />
+     <Compile Include="Assets\Scripts\CarWheel.cs" />
      <Compile Include="Assets\Scripts\CharacterCustomization.cs" />
+     <Compile Include="Assets\Scripts\CircularMenu.cs" />
+     <Compile Include="Assets\Scripts\Client.cs" />
+     <Compile Include="Assets\Scripts\Compass.cs" />
+     <Compile Include="Assets\Scripts\Craft.cs" />
      <Compile Include="Assets\Scripts\Crafting.cs" />
+     <Compile Include="Assets\Scripts\CraftingItemData.cs" />
+     <Compile Include="Assets\Scripts\DestroyParticleSystem.cs" />
+     <Compile Include="Assets\Scripts\DestroyTimer.cs" />
+     <Compile Include="Assets\Scripts\FireballMovement.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\GrapplingHook.cs" />
+     <Compile Include="Assets\Scripts\Grenade.cs" />
+     <Compile Include="Assets\Scripts\Grid.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\ItemData.cs" />
+     <Compile Include="Assets\Scripts\InventoryItemData.cs" />
      <Compile Include="Assets\Scripts\ItemDatabase.cs" />
+     <Compile Include="Assets\Scripts\Node.cs" />
+     <Compile Include="Assets\Scripts\Path.cs" />
+     <Compile Include="Assets\Scripts\PickupObject.cs" />
      <Compile Include="Assets\Scripts\Pickupable.cs" />
+     <Compile Include="Assets\Scripts\PreviewObject.cs" />
+     <Compile Include="Assets\Scripts\RequirementItemData.cs" />
+     <Compile Include="Assets\Scripts\Server.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Skidding.cs" />
      <Compile Include="Assets\Scripts\Slot.cs" />
      <Compile Include="Assets\Scripts\StepThroughPortal.cs" />
+     <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
      <Compile Include="Assets\Scripts\ThrowPortal.cs" />
      <Compile Include="Assets\Scripts\Tooltip.cs" />
-     <Compile Include="Assets\Scripts\Walking.cs" />
      <Compile Include="Assets\Scripts\ahhhhh.cs" />
+     <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\MoveMotionPack\SampleScene\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\MoveMotionPack\SampleScene\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\MoveMotionPack\SampleScene\Shaders\ReflectiveDiffuseSpec.shader" />
+     <None Include="Assets\Shaders\UnlitAlphaWithFade.shader" />
      <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -98,6 +125,10 @@
  <Reference Include="UnityEditor.iOS.Extensions.Common">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{B4CED145-2E89-B432-2667-CD8069397E93}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

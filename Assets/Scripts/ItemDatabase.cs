@@ -25,6 +25,15 @@ public class ItemDatabase : MonoBehaviour
 		return null;
 	}
 
+	public Item FetchItemBySLUG(string slug)
+	{
+		for (int currentItem = 0; currentItem < database.Count; currentItem++)
+			if (database [currentItem].slug == slug)
+				return database [currentItem];
+
+		return null;
+	}
+
 	void ConstructItemDatabase()
 	{
 		for (int currentItem = 0; currentItem < itemData.Count; currentItem++)

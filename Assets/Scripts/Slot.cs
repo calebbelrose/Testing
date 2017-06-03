@@ -8,15 +8,17 @@ public class Slot : MonoBehaviour, IDropHandler
 	public int id;
 
 	private Inventory inventory;
+	private string playerName;
 
-	void Start()
+	public void Setup(string name)
 	{
-		inventory = GameObject.Find ("Inventory").GetComponent<Inventory> ();
+		playerName = name;
+		inventory = GameObject.Find (playerName).GetComponent<Inventory> ();
 	}
 
 	public void OnDrop (PointerEventData eventData)
 	{
-		ItemData droppedItem = eventData.pointerDrag.GetComponent<ItemData> ();
+		InventoryItemData droppedItem = eventData.pointerDrag.GetComponent<InventoryItemData> ();
 
 		if (inventory.items [id].id == -1)
 		{
@@ -30,10 +32,10 @@ public class Slot : MonoBehaviour, IDropHandler
 		else
 		{
 			Transform item = transform.GetChild(0);
-			ItemData itemData = item.GetComponent<ItemData> ();
+			InventoryItemData itemData = item.GetComponent<InventoryItemData> ();
 			itemData.slot = droppedItem.slot;
-			item.transform.SetParent(inventory.slots[droppedItem.slot].transform);
-			item.transform.position = inventory.slots [droppedItem.slot].transform.position;
+			item.transform.SetParent(inventory.inventorySlots[droppedItem.slot].transform);
+			item.transform.position = inventory.inventorySlots [droppedItem.slot].transform.position;
 
 			droppedItem.transform.SetParent(transform);
 			droppedItem.transform.position = transform.position;
