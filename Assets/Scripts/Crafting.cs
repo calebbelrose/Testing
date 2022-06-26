@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class Crafting : NetworkBehaviour
+public class Crafting : MonoBehaviour
 {
 	public GameObject slot;
 	public GameObject craftingItem;
@@ -18,7 +18,7 @@ public class Crafting : NetworkBehaviour
 
 	void Start()
 	{
-		if (isLocalPlayer)
+		//if (isLocalPlayer)
 		{
 			database = GameObject.Find ("Item Database").GetComponent<ItemDatabase> ();
 			playerName = gameObject.GetComponent<FollowCamera> ().playerName;

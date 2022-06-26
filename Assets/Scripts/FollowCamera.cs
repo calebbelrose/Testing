@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class FollowCamera : NetworkBehaviour
+public class FollowCamera : MonoBehaviour
 {
 	public GameObject character;
 	public GameObject inventoryCanvas;
@@ -24,10 +24,10 @@ public class FollowCamera : NetworkBehaviour
 		inventoryCanvas.SetActive(false);
 		craftingCanvas.SetActive(false);
 
-		if (isLocalPlayer)
+		//if (isLocalPlayer)
 		{
 			mainCamera.SetActive(true);
-			playerName = "Player" + playerControllerId.ToString ();
+			//playerName = "Player" + playerControllerId.ToString ();
 			animator = character.GetComponent<Animator> ();
 			gameObject.name = playerName;
 		}
@@ -35,8 +35,8 @@ public class FollowCamera : NetworkBehaviour
 
 	void Update()
 	{
-		if(isLocalPlayer)
-			if (Input.GetKeyDown (KeyCode.I))
+		//if(isLocalPlayer)
+		if (Input.GetKeyDown (KeyCode.I))
 			{
 				if (inventoryCanvas.activeSelf)
 				{

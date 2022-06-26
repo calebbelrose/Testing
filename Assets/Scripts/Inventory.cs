@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
-public class Inventory : NetworkBehaviour
+public class Inventory : MonoBehaviour
 {
 	public GameObject slot;
 	public GameObject inventoryItem;
@@ -25,7 +25,7 @@ public class Inventory : NetworkBehaviour
 
 	void Start()
 	{
-		if (isLocalPlayer)
+		//if (isLocalPlayer)
 		{
 			database = GameObject.Find ("Item Database").GetComponent<ItemDatabase> ();
 			playerName = gameObject.GetComponent<FollowCamera> ().playerName;

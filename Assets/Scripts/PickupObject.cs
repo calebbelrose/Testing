@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PickupObject : NetworkBehaviour {
+public class PickupObject : MonoBehaviour
+{
 
 	bool carrying = false;
 	GameObject carriedObject;
@@ -13,8 +14,8 @@ public class PickupObject : NetworkBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if(isLocalPlayer)
-			if (carrying)
+		//if(isLocalPlayer)
+		if (carrying)
 			{
 				Carry (carriedObject);
 				CheckDrop ();
